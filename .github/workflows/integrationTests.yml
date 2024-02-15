@@ -25,9 +25,8 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
-          java-version: '11'
+          java-version: '17'
+          distribution: 'temurin'
 
       - name: Run Integration Tests
         run: mvn -B verify
-
-      # Additional steps for deploying or other actions

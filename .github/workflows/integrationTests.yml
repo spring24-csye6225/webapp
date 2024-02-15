@@ -30,6 +30,7 @@ jobs:
           distribution: 'temurin'
       - name: Set JAVA_HOME
         run: echo "JAVA_HOME=$(which java)" >> $GITHUB_ENV
+        if: success()
 
       - name: Run Integration Tests
         run: mvn -B verify

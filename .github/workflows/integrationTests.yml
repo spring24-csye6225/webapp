@@ -28,8 +28,6 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - name: Set JAVA_HOME
-        run: echo "JAVA_HOME=/usr/bin" >> $GITHUB_ENV
 
       - name: Run Integration Tests
         run: mvn -B verify
